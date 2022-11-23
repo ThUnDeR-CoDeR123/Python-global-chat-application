@@ -13,9 +13,13 @@ def set_message(message):
         Chat_messages[msg]=message
         return Chat_messages
 if __name__=="__main__":
+
     username=st.text_input("User Id")
     message=st.text_input("Messages")
+    if st.button("Clear"):
+        Chat_messages={}
     Chat_messages=set_message(message)
+    st.write(Chat_messages)
     st.write(Chat_messages)
 
 
